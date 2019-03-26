@@ -6,6 +6,11 @@ $(document).ready(function() {
     'spontaneous',
     'wildly energetic',
     'fluffy',
+    'mysterious',
+    'random',
+    'happy',
+    'ecstatic',
+    'chipper',
   ];
   var articlesArr = ['a', 'the'];
   var nounsArr = [
@@ -17,6 +22,7 @@ $(document).ready(function() {
     'puppy',
     'chocolate bar',
     'ice cream',
+    'kitty',
   ];
   var name = $('#name').text();
 
