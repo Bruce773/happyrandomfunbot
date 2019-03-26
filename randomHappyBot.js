@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var verbsArr = ['ran through', 'ate', 'smelled', 'jumped', 'sang to'];
+  var verbsArr = ['ran through', 'ate', 'smelled', 'jumped over', 'sang to'];
   var adjectivesArr = [
     'blue',
     'flavorful',
