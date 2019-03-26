@@ -1,8 +1,23 @@
 $(document).ready(function() {
-  var verbsArr = ['ran through', 'ate', 'smelled', 'jumped', 'sang to'];  
-  var adjectivesArr = ['blue', 'flavorful', 'spontaneous', 'wildly energetic', 'fluffy'];
+  var verbsArr = ['ran through', 'ate', 'smelled', 'jumped', 'sang to'];
+  var adjectivesArr = [
+    'blue',
+    'flavorful',
+    'spontaneous',
+    'wildly energetic',
+    'fluffy',
+  ];
   var articlesArr = ['a', 'the'];
-  var nounsArr = ['rainbow', 'horse', 'cloud', 'car', 'streetlight', 'puppy'];
+  var nounsArr = [
+    'rainbow',
+    'horse',
+    'cloud',
+    'car',
+    'streetlight',
+    'puppy',
+    'chocolate bar',
+    'ice cream',
+  ];
   var name = $('#name').text();
 
   var _randomVerb = function() {
