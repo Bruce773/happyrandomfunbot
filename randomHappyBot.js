@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  const verbsArr = ["ran through", "ate", "smelled", "jumped", "sang to"];
+  const verbsArr = ["ran through", "ate", "smelled", "jumped over", "sang to"];
   const adjectivesArr = [
     "blue",
     "flavorful",
