@@ -45,7 +45,7 @@ $(document).ready(function() {
     $("#text").text(() => {
       return `${$(
         "#name"
-      ).val()} ${_randomVerb()} ${_randomArticle()} ${_randomAdjective()} ${_randomNoun()} while ${_randomArticle()} ${_randomNoun()} ${_randomVerb()}. 
+      ).val()} ${_randomVerb()} ${_randomArticle()} ${_randomAdjective()} ${_randomNoun()} while ${_randomArticle()} ${_randomNoun()} ${_randomVerb()} it. 
       ${capitalizeWord(_randomLyAdjective())}, ${$(
         "#name"
       ).val()} also ${_randomVerb()} ${_randomArticle()} ${_randomAdjective()} ${_randomNoun()}. 
