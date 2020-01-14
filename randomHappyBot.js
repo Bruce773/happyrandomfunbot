@@ -1,6 +1,6 @@
-$(document).ready(function() {
-  var verbsArr = ["ran through", "ate", "smelled", "jumped", "sang to"];
-  var adjectivesArr = [
+$(document).ready(() => {
+  const verbsArr = ["ran through", "ate", "smelled", "jumped", "sang to"];
+  const adjectivesArr = [
     "blue",
     "flavorful",
     "spontaneous",
@@ -14,23 +14,20 @@ $(document).ready(function() {
     "annoyingly",
     "trepidatiously"
   ];
-  var articlesArr = ["a", "the"];
-  var nounsArr = ["rainbow", "horse", "cloud", "car", "streetlight", "puppy"];
-  var name = $("#name").text();
+  const articlesArr = ["a", "the"];
+  const nounsArr = ["rainbow", "horse", "cloud", "car", "streetlight", "puppy"];
 
-  const _randomVerb = function() {
-    return verbsArr[Math.floor(Math.random() * verbsArr.length)];
-  };
+  const _randomVerb = () =>
+    verbsArr[Math.floor(Math.random() * verbsArr.length)];
 
-  const _randomAdjective = function() {
-    return adjectivesArr[Math.floor(Math.random() * adjectivesArr.length)];
-  };
-  const _randomArticle = function() {
-    return articlesArr[Math.floor(Math.random() * articlesArr.length)];
-  };
-  const _randomNoun = function() {
-    return nounsArr[Math.floor(Math.random() * nounsArr.length)];
-  };
+  const _randomAdjective = () =>
+    adjectivesArr[Math.floor(Math.random() * adjectivesArr.length)];
+
+  const _randomArticle = () =>
+    articlesArr[Math.floor(Math.random() * articlesArr.length)];
+
+  const _randomNoun = () =>
+    nounsArr[Math.floor(Math.random() * nounsArr.length)];
 
   const _randomLyAdjective = () =>
     lyAdjectivesArr[Math.floor(Math.random() * lyAdjectivesArr.length)];
@@ -41,17 +38,19 @@ $(document).ready(function() {
     return `${firstLetterCapped}${wordwithoutFirstLetter}`;
   };
 
-  $("#buttonToClick").on("click", function() {
-    $("#text").text(() => {
-      return `${$(
-        "#name"
-      ).val()} ${_randomVerb()} ${_randomArticle()} ${_randomAdjective()} ${_randomNoun()} while ${_randomArticle()} ${_randomNoun()} ${_randomVerb()} it. 
+  $("#buttonToClick").on("click", () => {
+    $("#name").val() !== ""
+      ? $("#text").text(() => {
+          return `${$(
+            "#name"
+          ).val()} ${_randomVerb()} ${_randomArticle()} ${_randomAdjective()} ${_randomNoun()} while ${_randomArticle()} ${_randomNoun()} ${_randomVerb()} it. 
       ${capitalizeWord(_randomLyAdjective())}, ${$(
-        "#name"
-      ).val()} also ${_randomVerb()} ${_randomArticle()} ${_randomAdjective()} ${_randomNoun()}. 
+            "#name"
+          ).val()} also ${_randomVerb()} ${_randomArticle()} ${_randomAdjective()} ${_randomNoun()}. 
       ${$(
         "#name"
       ).val()} also ${_randomVerb()} ${_randomArticle()} ${_randomNoun()}.`;
-    });
+        })
+      : $("#text").text(() => "Please enter your name in the box above");
   });
 });
